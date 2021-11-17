@@ -179,8 +179,7 @@ class Client:
                     NODE_PORT = response["port"]
                     return (NODE_ADDRESS, NODE_PORT)
                 elif "message" in response:
-                    pretty_print(f"Warning: {response['message']}"
-                                 + ", retrying in 15s", "warning", "net0")
+                    pretty_print(f"Warning: {response['message']}" + ", retrying in 15s", "warning", "net0")
                     sleep(10)
                 else:
                     raise Exception(
